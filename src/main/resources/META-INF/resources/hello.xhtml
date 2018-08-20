@@ -8,10 +8,102 @@
       xmlns:p="http://primefaces.org/ui">
 
     <h:head>
-        <title>Hello</title>
+        <title>My Diploma</title>
     </h:head>
 
     <h:body>
-        <h:outputText value="Hello"/>
+        <p:button value="Bookmark" icon="ui-icon-star">
+            <f:param name="productId" value="10" />
+        </p:button>
+        <p:button  value="With Icon" icon="ui-icon-star">
+            <f:param name="productId" value="20" />
+        </p:button>
+        <p:button  icon="ui-icon-star" title="Icon Only">
+            <f:param name="productId" value="30" />
+        </p:button>
+        <br/>
+        <p:button  value="StarStar" icon="pop-star" disabled="false">
+            <f:param name="productId" value="40" />
+        </p:button>
+        <h:form>
+            <p:growl id="messages" />
+
+        </h:form>
+        <p:layout fullPage="true">
+            <p:layoutUnit position="west" header="west" resizable="true" closable="true" collapsible="true">
+                West
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center" header="center" resizable="true" closable="true" collapsible="true">
+                <p:button  value="StarStar" icon="pop-star" disabled="false">
+                    <f:param name="productId" value="40" />
+                </p:button>
+                <p:layout >
+                    <p:layoutUnit position="west" header="west" resizable="true" closable="true" collapsible="true">
+                        <p:layout >
+                            <p:layoutUnit position="west" header="west" resizable="true" closable="true" collapsible="true">
+                                West
+                            </p:layoutUnit>
+
+                            <p:layoutUnit position="center" header="center" resizable="true" closable="true" collapsible="true">
+                                <p:button  value="StarStar" icon="pop-star" disabled="false">
+                                    <f:param name="productId" value="40" />
+                                </p:button>
+
+                            </p:layoutUnit>
+
+                            <p:layoutUnit position="north" header="north" resizable="true" closable="true" collapsible="true">
+                                <p:link  value="Bookmark">
+
+                                </p:link>
+                            </p:layoutUnit>
+
+                            <p:layoutUnit position="east" header="east" resizable="true" closable="true" collapsible="true">
+                                East
+                            </p:layoutUnit>
+
+                            <p:layoutUnit position="south" header="south" resizable="true" closable="true" collapsible="true">
+                                South
+                            </p:layoutUnit>
+                        </p:layout>
+                    </p:layoutUnit>
+
+                    <p:layoutUnit position="center" header="center" resizable="true" closable="true" collapsible="true">
+                        <p:button  value="StarStar" icon="pop-star" disabled="false">
+                            <f:param name="productId" value="40" />
+                        </p:button>
+
+                    </p:layoutUnit>
+
+                    <p:layoutUnit position="north" header="north" resizable="true" closable="true" collapsible="true">
+                        <p:link  value="Bookmark">
+
+                        </p:link>
+                    </p:layoutUnit>
+
+                    <p:layoutUnit position="east" header="east" resizable="true" closable="true" collapsible="true">
+                        East
+                    </p:layoutUnit>
+
+                    <p:layoutUnit position="south" header="south" resizable="true" closable="true" collapsible="true">
+                        South
+                    </p:layoutUnit>
+                </p:layout>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="north" header="north" resizable="true" closable="true" collapsible="true">
+                <p:link  value="Bookmark">
+
+                </p:link>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="east" header="east" resizable="true" closable="true" collapsible="true">
+                East
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" header="south" resizable="true" closable="true" collapsible="true">
+                South
+            </p:layoutUnit>
+        </p:layout>
     </h:body>
 </html>
