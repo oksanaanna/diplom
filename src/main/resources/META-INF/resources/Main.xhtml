@@ -11,14 +11,27 @@
 
 </h:head>
 
-<h:body>
-    <h2> Main </h2>
+<h:body >
+    <h1 style="color:blue"> MAIN </h1>
     <hr/>
-    <h:panelGrid columns="4" cellspacing ="50" >
-        <p:link value="Profile"  outcome="goToProfile"/>
-        <p:link value="Pictures"  outcome="goToPictures"/>
-        <p:link value="History"  outcome="goToHistory"/>
-        <p:link value="About"  outcome="goToAbout"/>
+    <h:panelGrid columns="5" cellspacing ="150" bgcolor="lightblue">
+        <p:link outcome="goToProfile">
+            <h2>PROFILE</h2>
+        </p:link>
+        <p:link outcome="goToPictures">
+            <h2>PICTURES</h2>
+        </p:link>
+        <p:link value="History"  outcome="goToHistory">
+            <h2>HISTORY</h2>
+        </p:link>
+
+        <p:link value="About"  outcome="goToAbout">
+           <h2>ABOUT</h2>
+         </p:link>
+
+        <p:link value="LessonPage"  outcome="goToLessonPage">
+        <h2>ABOUT</h2>
+        </p:link>
     </h:panelGrid>
 
 </h:body>

@@ -8,16 +8,20 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-
+    <h:form>
+        <p:outputLabel value="Name"/>
+        <p:inputText value="#{person.name}"/>
+        <p:commandButton ajax="false"/>
+        <br/>
+        <p:commandLink ajax="false" value="GO" action="Main"/>
+    </h:form>
 </h:head>
 
 <h:body>
-    <h1> Profile </h1>
+    <h1> Offers </h1>
     <hr/>
-    <h:panelGrid columns="3" cellspacing ="100" >
+    <h:panelGrid columns="5" cellspacing ="100" >
         <p:link value="Main"  outcome="goToMain"/>
-        <p:link value="History"  outcome="goToHistory"/>
-        <p:link value="About"  outcome="goToAbout"/>
     </h:panelGrid>
 
 </h:body>
