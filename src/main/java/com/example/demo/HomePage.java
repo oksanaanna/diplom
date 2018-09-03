@@ -7,15 +7,15 @@ import javax.inject.Named;
 
 @SuppressWarnings("ALL")
 @Named
-public class Person {
+public class HomePage {
 
-    private String name;
-    private String surname;
-    private int count;
-    private String gender;
+    @Inject
+    private Person person;
+
+    public String password;
+
     private int age;
     private String login;
-    private String password;
 
     public String checkPassword() {
         if (password.equals("pass")) {
@@ -23,7 +23,7 @@ public class Person {
         } else {
             sendMessage("Invalid Password");
             return null;
-       }
+        }
 
     }
 
@@ -41,61 +41,21 @@ public class Person {
                 message,null));
     }
 
-    public String getLogin() {
-        return login;
-    }
-
     public String getPassword() {
         return password;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
-
-    public int getAge() {
-        return age;
+    public String getLogin() {
+        return login;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        count++;
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setLogin(String login) {
+        this.login = login;
     }
 }
+
+

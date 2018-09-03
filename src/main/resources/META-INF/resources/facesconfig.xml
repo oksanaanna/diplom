@@ -29,8 +29,8 @@
             <to-view-id>/Profile.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>goToLessonPage</from-outcome>
-            <to-view-id>/LessonPage.xhtml</to-view-id>
+            <from-outcome>goToHomePage</from-outcome>
+            <to-view-id>/HomePage.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>goToInvalidPage</from-outcome>

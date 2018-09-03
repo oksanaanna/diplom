@@ -12,12 +12,24 @@
 </h:head>
 
 <h:body>
-    <h1> Profile </h1>
+    <h1 style="color:blueviolet"> Profile </h1>
     <hr/>
-    <h:panelGrid columns="3" cellspacing ="100" >
-        <p:link value="Main"  outcome="goToMain"/>
-        <p:link value="History"  outcome="goToHistory"/>
-        <p:link value="About"  outcome="goToAbout"/>
+    <h:panelGrid columns="5" cellspacing="168">
+        <p:link outcome="goToMain">
+            <h2 style="color:royalblue">MAIN</h2>
+        </p:link>
+        <p:link outcome="goToHistory">
+            <h2 style="color:mediumslateblue">HISTORY</h2>
+        </p:link>
+        <p:link outcome="goToAbout">
+            <h2 style="color:dodgerblue">ABOUT</h2>
+        </p:link>
+        <p:link outcome="goToPictures">
+            <h2 style="color:skyblue">PICTURES</h2>
+        </p:link>
+        <p:link outcome="goToHomePage">
+            <h2 style="color:lightseagreen">HOME PAGE</h2>
+        </p:link>
     </h:panelGrid>
 
 </h:body>

@@ -12,14 +12,31 @@
 </h:head>
 
 <h:body>
-    <h1> Pictures </h1>
+    <h1 style="color:deepskyblue"> Pictures </h1>
     <hr/>
-    <h:panelGrid columns="4" cellspacing ="100" >
-        <p:link value="Profile"  outcome="goToProfile"/>
-        <p:link value="Main"  outcome="goToMain"/>
-        <p:link value="History"  outcome="goToHistory"/>
-        <p:link value="About"  outcome="goToAbout"/>
-    </h:panelGrid>
+    <h:panelGrid columns="5" cellspacing ="100" >
+        <p:link outcome="goToProfile">
+            <h2 style="color:cornflowerblue" align="left" dir="ltr">PROFILE</h2>
+        </p:link>
+        <p:link outcome="goToMain">
+            <h2 style="color:mediumslateblue" align="justify">MAIN</h2>
+        </p:link>
+        <p:link outcome="goToHistory">
+            <h2 style="color:royalblue" align="center">HISTORY</h2>
+        </p:link>
 
+        <p:link outcome="goToAbout">
+            <h2 style="color:steelblue" align="right">ABOUT</h2>
+        </p:link>
+
+        <p:link  outcome="goToHomePage">
+            <h2 style="color:dodgerblue" align="right">HOME PAGE</h2>
+        </p:link>
+    </h:panelGrid>
+    <div id="images">
+        <ul>
+            <li><img src="pictures/Amsterdam.jpg" alt="Galleria 1 Description" title="Galleria 1"/></li>
+        </ul>
+    </div>
 </h:body>
 </html>

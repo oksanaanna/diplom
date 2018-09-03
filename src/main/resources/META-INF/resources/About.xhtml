@@ -7,16 +7,74 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
-<h:head>
 
+<h:head>
+    <h:outputStylesheet name="primefaces/components.css"/>
 </h:head>
 
 <h:body>
-    <h1> About </h1>
-    <hr/>
-    <h:panelGrid columns="1" cellspacing ="100" >
-        <p:link value="Main"  outcome="goToMain"/>
+    <div class="ui-grid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6" style="font-size: 30px;color:mediumblue;font-weight: bold">About</div>
+            <div class="ui-grid-col-6" ></div>
+        </div>
+    </div>
+
+    <h:panelGrid columns="5" cellspacing ="100" >
+        <p:link outcome="goToProfile">
+            <h2 style="color:cornflowerblue" align="left" dir="ltr">PROFILE</h2>
+        </p:link>
+        <p:link outcome="goToPictures">
+            <h2 style="color:mediumslateblue" align="justify">PICTURES</h2>
+        </p:link>
+        <p:link outcome="goToHistory">
+            <h2 style="color:royalblue" align="center">HISTORY</h2>
+        </p:link>
+
+        <p:link outcome="goToAbout">
+            <h2 style="color:steelblue" align="right">ABOUT</h2>
+        </p:link>
+
+        <p:link  outcome="goToHomePage">
+            <h2 style="color:dodgerblue" align="right">HOME PAGE</h2>
+        </p:link>
     </h:panelGrid>
 
+    <div class="ui-grid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6" style="font-size: 18px;color:mediumblue;font-weight: bold">Travel Story</div>
+        </div>
+    </div>
+
+    <br/>
+    <div id="default" style="margin-bottom:20px;color:darkblue" title="Default">
+        Nowadays, many families avoid summer holiday prices
+        and are considering Easter holidays as a cheaper alternative.
+        Spring break offers fewer crowds, cheaper
+        prices for flights and accommodation and warm temperatures.
+        You don’t know where to take your family this spring?
+        Explore our spring break getaways with kids.
+        We have many suggestions for you, from beach holidays to
+        recharge your soul to city trips to explore new customs
+        and cultures. Take a look at our best spring break vacation ideas.
+    </div>
+    <div class="ui-grid ui-grid-responsive">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-3"
+                 style="font-size: 18px;color:mediumblue;font-weight: bold">Amsterdam, The Netherlands
+            </div>
+            <div class="ui-grid-col-9"></div>
+        </div>
+    </div>
+    <br/>
+    <div id="next" style="margin-bottom:20px;color:darkblue" title="Default">
+    Cheese, canals, bike ride, tulips – the best time to visit Amsterdam is spring.
+    Put on your walking shoes or take a boat or bike ride along the canals to explore
+    the city. Amsterdam is a top destination for families. Visit a working windmill with
+    your kids, go to the petting zoo or get scared out of your wits in the dungeon.
+    Amsterdam also offers plenty of child-friendly places where you can bring your
+    whole family for breakfast, lunch, and dinner. The city’s museums are filled with
+    playful activities and hands-on exhibits and have so much to offer for children as well.
+    </div>
 </h:body>
 </html>
