@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+    <h:outputStylesheet name="primefaces/components.css"/>
+</h:head>
+
+<h:body>
+    <p:growl autoUpdate="true"/>
+
+    <h:form>
+        <h:panelGrid columns="2" cellspacing="50" style="margin-left: auto; margin-right: auto">
+
+            <p:outputLabel value="Name" style="font-size: 18px;color: greenyellow"/>
+            <p:inputText value="#{question1.name}"
+                         style="background: aliceblue; font-size: 18px;color: darkblue"/>
+
+            <p:outputLabel value="Country" style="font-size: 18px;color: deepskyblue"/>
+            <p:inputText value="#{question1.country}"
+                         style="background: aliceblue; font-size: 18px;color: darkblue"/>
+
+            <p:outputLabel value="Hobby" style="font-size: 20px;color: gold"/>
+            <p:selectOneMenu value="#{question1.hobby}">
+                <f:selectItem itemLabel="Chess" itemValue="Chess"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Girls" itemValue="Girls"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Men" itemValue="Men"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Cars" itemValue="Cars"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectOneMenu>
+
+            <p:outputLabel value="Gender" style="font-size: 20px;color: rebeccapurple"/>
+            <p:selectOneMenu value="#{question1.gender}">
+                <f:selectItem itemLabel="Male" itemValue="Male"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Fimale" itemValue="Fimale"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectOneMenu>
+            <p:outputLabel value="Education" style="font-size: 20px;color: springgreen"/>
+            <p:selectManyCheckbox value="#{question1.education}" columns="1" layout="grid"
+                                  style="font-size: 18px;color: blue">
+                <f:selectItem itemLabel="School" itemValue="School" style="font-size:
+                 18px;color: blue "/>
+                <f:selectItem itemLabel="College" itemValue="College"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="High school" itemValue="High school"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Master" itemValue="Master"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Doctor or higher" itemValue="Doctor or higher"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectManyCheckbox>
+
+            <p:outputLabel value="Occupation" style="font-size: 20px;color: deeppink"/>
+            <p:selectManyCheckbox value="#{question1.occupation}" columns="1" layout="grid"
+            style="font-size: 18px;color: blue">
+                <f:selectItem itemLabel="Art" itemValue="Art" style="font-size:
+                 18px;color: blue "/>
+                <f:selectItem itemLabel="Finance" itemValue="Finance"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectManyCheckbox>
+
+            <p:outputLabel value="Age range" style="font-size: 18px;color: blueviolet"/>
+            <p:selectOneRadio value="#{question1.ageRange}" layout="grid" columns="1">
+                <f:selectItem itemLabel="under 20" itemValue="Do 20"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="under 30" itemValue="Posle 30"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="under 40" itemValue="Posle 50"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="after 50" itemValue="Posle 50"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectOneRadio>
+
+            <p:commandButton value="Next" action="#{question1.goToNextPage}"/>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>

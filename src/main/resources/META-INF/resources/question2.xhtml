@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+    <h:outputStylesheet name="primefaces/components.css"/>
+</h:head>
+
+<h:body>
+    <p:growl autoUpdate="true"/>
+
+    <h:form>
+        <h:panelGrid columns="2" cellspacing="50" style="margin-left: auto; margin-right: auto">
+
+            <p:outputLabel value="Favorite number" style="font-size: 18px;color: greenyellow"/>
+            <p:inputText value="#{question2.favoriteNumber}"
+                         style="background: aliceblue; font-size: 18px;color: darkblue"/>
+
+            <p:outputLabel value="Favorite actor" style="font-size: 18px;color: deepskyblue"/>
+            <p:inputText value="#{question2.favoriteActors}"
+                         style="background: aliceblue; font-size: 18px;color: darkblue"/>
+
+            <p:outputLabel value="Favorite singer" style="font-size: 20px;color: gold"/>
+            <p:selectOneMenu value="#{question2.favoriteSingers}">
+                <f:selectItem itemLabel="Whitney Houston" itemValue="Whitney Houston"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Celine Dion" itemValue="Celine Dion"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Lara Fabian" itemValue="Lara Fabian"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Laura Pausini" itemValue="Laura Pausini"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectOneMenu>
+
+            <p:outputLabel value="Color" style="font-size: 20px;color: rebeccapurple"/>
+            <p:selectOneMenu value="#{question2.favoriteColor}">
+                <f:selectItem itemLabel="Dark" itemValue="Dark"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Light" itemValue="Light"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectOneMenu>
+            <p:outputLabel value="Favorite actors" style="font-size: 20px;color: springgreen"/>
+            <p:selectManyCheckbox value="#{question2.favoriteActors}" columns="1" layout="grid"
+                                  style="font-size: 18px;color: blue">
+                <f:selectItem itemLabel="Julia Roberts" itemValue="Julia Roberts" style="font-size:
+                 18px;color: blue "/>
+                <f:selectItem itemLabel="Jenifer Aniston" itemValue="Jenifer Aniston"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Barbara Streisand" itemValue="Barbara Streisand"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Cavin Costner" itemValue="Cavin Costner"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Vanessa Williams" itemValue="Vanessa Williams"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectManyCheckbox>
+
+            <p:outputLabel value="Ineterests" style="font-size: 18px;color: blueviolet"/>
+            <p:selectOneRadio value="#{question2.interests}" layout="grid" columns="1">
+                <f:selectItem itemLabel="Outdoors" itemValue="Outdoors"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Painting" itemValue="Painting"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Sports" itemValue="Sports"
+                              style="font-size: 18px;color: blue"/>
+                <f:selectItem itemLabel="Style" itemValue="Style"
+                              style="font-size: 18px;color: blue"/>
+            </p:selectOneRadio>
+
+            <p:commandButton value="Next" action="#{question2.goToNextPage}"/>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>

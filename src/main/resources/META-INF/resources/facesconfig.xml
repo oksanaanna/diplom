@@ -36,6 +36,18 @@
             <from-outcome>goToInvalidPage</from-outcome>
             <to-view-id>/InvalidPage.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>goQuestion1</from-outcome>
+            <to-view-id>/question1.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goQuestion2</from-outcome>
+            <to-view-id>/question2.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goQuestion3</from-outcome>
+            <to-view-id>/question3.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
 
 </faces-config>

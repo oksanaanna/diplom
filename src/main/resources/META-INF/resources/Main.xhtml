@@ -12,6 +12,21 @@
 </h:head>
 
 <h:body >
+    <p:selectOneMenu value="#{person.name}">
+        <f:selectItem itemLabel="birds" itemValue="1"/>
+        <f:selectItem itemLabel="dogs" itemValue="2"/>
+        <f:selectItem itemLabel="cats" itemValue="3"/>
+    </p:selectOneMenu>
+    <p:selectOneRadio value="#{person.name}" columns="1" layout="grid">
+        <f:selectItem itemLabel="male" itemValue="4"/>
+        <f:selectItem itemLabel="fimale" itemValue="5"/>
+        <f:selectItem itemLabel="doesn't metter" itemValue="6"/>
+    </p:selectOneRadio>
+    <p:selectManyCheckbox>
+        <f:selectItem itemLabel="music" itemValue="7"/>
+        <f:selectItem itemLabel="books" itemValue="8"/>
+        <f:selectItem itemLabel="theatre" itemValue="9"/>
+    </p:selectManyCheckbox>
     <h1 style="color:deepskyblue"> MAIN </h1>
     <hr/>
     <h:panelGrid columns="5" cellspacing ="164">
