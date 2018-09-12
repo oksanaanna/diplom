@@ -14,8 +14,23 @@
 
 <h:body>
     <h:form>
-        <h:panelGrid columns="2" cellspacing="50" style="margin-left: auto; margin-right: auto">
-1
+        <h:panelGrid columns="4" cellspacing ="164">
+            <p:link outcome="goToquestion1">
+                <h2 style="color:cornflowerblue">QUESTIONNAIRE PAGE 1</h2>
+            </p:link>
+            <p:link outcome="goToquestion2">
+                <h2 style="color:mediumslateblue">QUESTIONNAIRE PAGE 2</h2>
+            </p:link>
+            <p:link outcome="goToquestion3">
+                <h2 style="color:royalblue">QUESTIONNAIRE PAGE 3</h2>
+            </p:link>
+            <p:link outcome="goToHome">
+                <h2 style="color:cornflowerblue">HOME</h2>
+            </p:link>
+            <p:commandButton value="Back"
+                             style="width: 100px; height:30px;text-align: center;
+                             font-size:18px; color:blue"
+                             action="#{question1.goToNextPage}"/>
         </h:panelGrid>
     </h:form>
 </h:body>

@@ -12,7 +12,7 @@
 </h:head>
 
 <h:body>
-    <p:growl id="message" life="1000" keepAlive="true" />
+    <p:growl id="message" life="1000" keepAlive="true"/>
 
     <p:layout fullPage="true">
         <p:layoutUnit minSize="50" position="north" header="Main Page" resizable="true" closable="true"
@@ -34,7 +34,8 @@
                 </p:link>
             </h:panelGrid>
         </p:layoutUnit>
-        <p:layoutUnit minSize="700" position="east" header="Personal Info" resizable="true" closable="true" collapsible="true"
+        <p:layoutUnit minSize="700" position="east" header="Personal Info" resizable="true" closable="true"
+                      collapsible="true"
                       style="font-size: 18px;color: deepskyblue">
             <h:form>
                 <h:panelGrid columns="2" cellspacing="60">
@@ -48,8 +49,8 @@
                     <p:outputLabel value="Gender" style="font-size: 18px;color: dodgerblue"/>
                     <p:inputText value="#{person.gender}"
                                  style="background: aliceblue; font-size: 18px;color: darkblue"/>
-                    <p:commandButton  value="Submit" update="message" action="#{homePage.age}" style="font-size: 20px;color:blue ;
-                    font-weight:bold"  />
+                    <p:commandButton value="Submit" update="message" action="#{homePage.age}" style="font-size: 20px;color:blue ;
+                    font-weight:bold"/>
                 </h:panelGrid>
             </h:form>
 

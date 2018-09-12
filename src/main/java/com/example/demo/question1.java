@@ -40,7 +40,7 @@ public class question1 {
             return null;
         }
 
-        return "goQuestion2";
+        return "goquestion2";
     }
 
     public String getHobby() {

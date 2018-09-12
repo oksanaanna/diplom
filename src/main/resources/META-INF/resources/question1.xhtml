@@ -14,6 +14,16 @@
 
 <h:body>
     <p:growl autoUpdate="true"/>
+    <h:panelGrid columns="4" cellspacing="120">
+        <p:link value="Questionnaire 2" outcome="goToquestion2"
+                style="font-size: 22px;color: dodgerblue;font-weight: bold">
+        </p:link>
+        <p:link value="Questionnaire 3" outcome="goToquestion3"
+                style="font-size: 22px;color: deepskyblue;font-weight: bold ">
+        </p:link>
+        <p:link value="Home" outcome="goToHome" style="font-size: 22px;color: steelblue ;font-weight: bold">
+        </p:link>
+    </h:panelGrid>
 
     <h:form>
         <h:panelGrid columns="2" cellspacing="50" style="margin-left: auto; margin-right: auto">
@@ -62,7 +72,7 @@
 
             <p:outputLabel value="Occupation" style="font-size: 20px;color: deeppink"/>
             <p:selectManyCheckbox value="#{question1.occupation}" columns="1" layout="grid"
-            style="font-size: 18px;color: blue">
+                                  style="font-size: 18px;color: blue">
                 <f:selectItem itemLabel="Art" itemValue="Art" style="font-size:
                  18px;color: blue "/>
                 <f:selectItem itemLabel="Finance" itemValue="Finance"
@@ -81,8 +91,11 @@
                               style="font-size: 18px;color: blue"/>
             </p:selectOneRadio>
 
-            <p:commandButton value="Next" action="#{question1.goToNextPage}"/>
+            <p:commandButton value="Next" style="width: 100px; height:30px;text-align: center; font-size:18px ;
+            color:blue" action="#{question1.goToNextPage}"/>
         </h:panelGrid>
     </h:form>
+
+
 </h:body>
 </html>

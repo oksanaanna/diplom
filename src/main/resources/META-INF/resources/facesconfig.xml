@@ -37,16 +37,20 @@
             <to-view-id>/InvalidPage.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>goQuestion1</from-outcome>
+            <from-outcome>goToquestion1</from-outcome>
             <to-view-id>/question1.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>goQuestion2</from-outcome>
+            <from-outcome>goToquestion2</from-outcome>
             <to-view-id>/question2.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>goQuestion3</from-outcome>
+            <from-outcome>goToquestion3</from-outcome>
             <to-view-id>/question3.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToHome</from-outcome>
+            <to-view-id>/Home.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 
