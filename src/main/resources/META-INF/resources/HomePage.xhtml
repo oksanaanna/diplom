@@ -15,7 +15,7 @@
     <p:growl id="message" life="1000" keepAlive="true"/>
 
     <p:layout fullPage="true">
-        <p:layoutUnit minSize="50" position="north" header="Main Page" resizable="true" closable="true"
+        <p:layoutUnit minSize="50" position="north" header="Home Page" resizable="true" closable="true"
                       collapsible="true" style="font-size: 18px;color: deepskyblue">
             <h:panelGrid columns="5" cellspacing="120">
                 <p:link value="Profile" outcome="goToProfile"
@@ -59,16 +59,25 @@
                       style="font-size: 18px;color: deepskyblue">
             <h:form>
 
-                <h:panelGrid columns="2" cellspacing="50" style="margin-left: auto; margin-right: auto">
-                    <p:outputLabel value="Login" style="font-size: 18px;color: deepskyblue"/>
-                    <p:inputText value="#{homePage.login}"
-                                 style="background: aliceblue; font-size: 18px;color: darkblue"/>
-                    <p:outputLabel value="Password" style="font-size: 18px;color: deepskyblue"/>
-                    <p:inputText value="#{homePage.password}"
-                                 style="background: aliceblue; font-size: 18px;color: darkblue"/>
-                    <p:commandButton value="Login" update="message" style="font-size: 20px;color:blue"
-                                     action="#{homePage.checkPassword}"/>
-                </h:panelGrid>
+                <p:dataTable id="table" rows="20" paginator="true" var="temp"
+                             value="#{registrationPage.findAllRegistrations()}">
+
+                    <p:column headerText="Id">
+                        <h:outputText value="#{temp.id}" />
+                    </p:column>
+
+                    <p:column headerText="Login">
+                        <h:outputText value="#{temp.login}" />
+                    </p:column>
+
+                    <p:column headerText="Password">
+                        <h:outputText value="#{temp.password}" />
+                    </p:column>
+
+                    <p:column headerText="Email">
+                        <h:outputText value="#{temp.email}" />
+                    </p:column>
+                </p:dataTable>
             </h:form>
         </p:layoutUnit>
     </p:layout>
