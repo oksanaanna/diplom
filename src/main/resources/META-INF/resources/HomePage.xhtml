@@ -60,9 +60,11 @@
             <h:form>
                 <h:panelGrid columns="2" cellspacing="60">
                     <p:outputLabel value="Catalog" style="font-size: 15px;color: blue "/>
-                    <p:selectOneMenu value=" ">
-                        <f:selectItems itemValue="#{homePage.}"/>
+
+                    <p:selectOneMenu value="#{homePage.selectedCatalog}">
+                        <f:selectItems itemValue="#{homePage.catalogs}"/>
                     </p:selectOneMenu>
+
                     <p:outputLabel value="Category" style="font-size: 15px;color: blue "/>
                     <p:selectOneMenu value=" ">
                         <f:selectItem itemLabel="Nervous system" itemValue="1"/>
