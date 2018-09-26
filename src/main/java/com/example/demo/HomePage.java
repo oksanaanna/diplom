@@ -11,7 +11,8 @@ public class HomePage {
 
     @Inject
     private Person person;
-
+    @Inject
+    private CatalogRepository catalogRepository;
     public String password;
 
     private int age;
@@ -24,7 +25,6 @@ public class HomePage {
             sendMessage("Invalid Password");
             return null;
         }
-
     }
 
     public String age() {
@@ -39,6 +39,14 @@ public class HomePage {
         FacesContext context= FacesContext.getCurrentInstance();
         context.addMessage(null,new FacesMessage(FacesMessage.SEVERITY_WARN,
                 message,null));
+    }
+
+    public CatalogRepository getCatalogRepository() {
+        return catalogRepository;
+    }
+
+    public void setCatalogRepository(CatalogRepository catalogRepository) {
+        this.catalogRepository = catalogRepository;
     }
 
     public String getPassword() {

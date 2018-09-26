@@ -55,23 +55,29 @@
             </h:form>
 
         </p:layoutUnit>
-        <p:layoutUnit position="center" header="Search" resizable="true" closable="true" collapsible="true"
-                      style="font-size: 15px;color: blue">
+        <p:layoutUnit position="center" header="Sign In" resizable="true" closable="true" collapsible="true"
+                      style="font-size: 18px;color: deepskyblue">
             <h:form>
-                <h:panelGrid columns="2" cellspacing="60">
-                    <p:outputLabel value="Catalog" style="font-size: 15px;color: blue "/>
-                    <p:selectOneMenu value=" ">
-                        <f:selectItems itemValue="#{homePage.}"/>
-                    </p:selectOneMenu>
-                    <p:outputLabel value="Category" style="font-size: 15px;color: blue "/>
-                    <p:selectOneMenu value=" ">
-                        <f:selectItem itemLabel="Nervous system" itemValue="1"/>
-                        <f:selectItem itemLabel="Blood system" itemValue="2"/>
-                        <f:selectItem itemLabel="Respiratory system" itemValue="3"/>
-                        <f:selectItem itemLabel="Endocrine system" itemValue="4"/>
-                        <f:selectItem itemLabel="Beauty" itemValue="5"/>
-                    </p:selectOneMenu>
-                </h:panelGrid>
+
+                <p:dataTable id="table" rows="20" paginator="true" var="temp"
+                             value="#{registrationPage.findAllRegistrations()}">
+
+                    <p:column headerText="Id">
+                        <h:outputText value="#{temp.id}" />
+                    </p:column>
+
+                    <p:column headerText="Login">
+                        <h:outputText value="#{temp.login}" />
+                    </p:column>
+
+                    <p:column headerText="Password">
+                        <h:outputText value="#{temp.password}" />
+                    </p:column>
+
+                    <p:column headerText="Email">
+                        <h:outputText value="#{temp.email}" />
+                    </p:column>
+                </p:dataTable>
             </h:form>
         </p:layoutUnit>
     </p:layout>
