@@ -1,6 +1,4 @@
-package com.example.demo;
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
+package com.example.demo.entities;
 import javax.persistence.*;
 
 

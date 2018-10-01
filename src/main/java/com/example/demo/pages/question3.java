@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.pages;
 
 public class question3 {
     /*public String page1="goquestion1";

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.pages;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;

@@ -1,4 +1,7 @@
-package com.example.demo;
+package com.example.demo.pages;
+
+import com.example.demo.entities.Car;
+import com.example.demo.repositories.CarRepository;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;

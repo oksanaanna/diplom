@@ -1,11 +1,16 @@
-package com.example.demo;
+package com.example.demo.pages;
 
+import com.example.demo.entities.Catalog;
+import com.example.demo.entities.Category;
+import com.example.demo.entities.Medicine;
+import com.example.demo.entities.Registration;
+import com.example.demo.repositories.CatalogRepository;
+import com.example.demo.repositories.RegistrationRepository;
 import org.springframework.data.domain.Example;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.ArrayList;

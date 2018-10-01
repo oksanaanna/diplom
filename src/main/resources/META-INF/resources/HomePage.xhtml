@@ -34,44 +34,27 @@
                 </p:link>
             </h:panelGrid>
         </p:layoutUnit>
-        <p:layoutUnit minSize="700" position="east" header="Personal Info" resizable="true" closable="true"
+        <p:layoutUnit minSize="600" position="east" header="Description" resizable="true" closable="true"
                       collapsible="true"
-                      style="font-size: 18px;color: deepskyblue">
-            <h:form>
-                <h:panelGrid columns="2" cellspacing="60">
-                    <p:outputLabel value="Name" style="font-size: 18px;color: dodgerblue "/>
-                    <p:inputText value="#{person.name}" style="background: aliceblue;font-size: 18px; color: darkblue"/>
-                    <p:outputLabel value="Surname" style="font-size: 18px;color: dodgerblue"/>
-                    <p:inputText value="#{person.surname}"
-                                 style="background: aliceblue;font-size: 18px;color: darkblue"/>
-                    <p:outputLabel value="Age" style="font-size: 18px;color: dodgerblue"/>
-                    <p:inputText value="#{person.age}" style="background: aliceblue;font-size: 18px;color: darkblue"/>
-                    <p:outputLabel value="Gender" style="font-size: 18px;color: dodgerblue"/>
-                    <p:inputText value="#{person.gender}"
-                                 style="background: aliceblue; font-size: 18px;color: darkblue"/>
-                    <p:commandButton value="Submit" update="message" action="#{homePage.age}" style="font-size: 20px;color:blue ;
-                    font-weight:bold"/>
-                </h:panelGrid>
-            </h:form>
+                      style="font-size: 16px;background: aliceblue; color: blue">
 
         </p:layoutUnit>
         <p:layoutUnit position="center" header="Search" resizable="true" closable="true" collapsible="true"
-                      style="font-size: 15px;color: blue">
+                      style="font-size: 16px; background-color: deepskyblue; text-decoration-color: blue">
             <h:form>
                 <h:panelGrid columns="2" cellspacing="60">
-                    <p:outputLabel value="Catalog" style="font-size: 15px;color: blue "/>
+                    <p:outputLabel value="Search" style="font-size: 16px; color: dodgerblue "/>
+                    <p:inputText value=" " style="background: aliceblue;font-size: 16px; color: darkblue"/>
+
+                    <p:outputLabel value="Catalog" style="font-size: 16px;color: blue "/>
 
                     <p:selectOneMenu value="#{homePage.selectedCatalogId}">
                         <f:selectItems value="#{homePage.catalogs}"/>
                     </p:selectOneMenu>
 
                     <p:outputLabel value="Category" style="font-size: 15px;color: blue "/>
-                    <p:selectOneMenu value=" ">
-                        <f:selectItem itemLabel="Nervous system" itemValue="1"/>
-                        <f:selectItem itemLabel="Blood system" itemValue="2"/>
-                        <f:selectItem itemLabel="Respiratory system" itemValue="3"/>
-                        <f:selectItem itemLabel="Endocrine system" itemValue="4"/>
-                        <f:selectItem itemLabel="Beauty" itemValue="5"/>
+                    <p:selectOneMenu value="#{homePage.selectedCategoryId}">
+                        <f:selectItems value="#{homePage.categories}"/>
                     </p:selectOneMenu>
                 </h:panelGrid>
             </h:form>

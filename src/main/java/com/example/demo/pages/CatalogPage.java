@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.example.demo.pages;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
+import com.example.demo.repositories.CatalogRepository;
+
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.util.List;
+
 @Named
 public class CatalogPage {
     @Inject

@@ -1,4 +1,9 @@
-package com.example.demo;
+package com.example.demo.pages;
+
+import com.example.demo.entities.Catalog;
+import com.example.demo.entities.Category;
+import com.example.demo.repositories.CatalogRepository;
+import com.example.demo.repositories.CategoryRepository;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
@@ -20,11 +25,18 @@ public class HomePage {
     @Inject
     private CatalogRepository catalogRepository;
 
+    @Inject
+    private CategoryRepository categoryRepository;
+
     private String password;
 
     private String selectedCatalogId;
 
+    private String selectedCategoryId;
+
     private Map<String, String> catalogs;
+
+    private Map<String, String> categories;
 
     private String login;
 
@@ -33,6 +45,7 @@ public class HomePage {
     @PostConstruct
     public void init() {
         catalogs = readCatalogsFromDatabase();
+        categories = readCategoriesFromDatabase();
     }
 
     public String checkPassword() {
@@ -49,6 +62,16 @@ public class HomePage {
 
         for (Catalog catalog : catalogRepository.findAll()) {
             catalogItems.put(catalog.getName(), String.valueOf(catalog.getId()));
+        }
+
+        return catalogItems;
+    }
+
+    private Map<String, String> readCategoriesFromDatabase() {
+        Map<String, String> catalogItems = new HashMap<>();
+
+        for (Category category : categoryRepository.findAll()) {
+            catalogItems.put(category.getCategoryName(), String.valueOf(category.getId()));
         }
 
         return catalogItems;
@@ -71,6 +94,22 @@ public class HomePage {
 
     public Map<String, String> getCatalogs() {
         return catalogs;
+    }
+
+    public String getSelectedCategoryId() {
+        return selectedCategoryId;
+    }
+
+    public void setSelectedCategoryId(String selectedCategoryId) {
+        this.selectedCategoryId = selectedCategoryId;
+    }
+
+    public Map<String, String> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Map<String, String> categories) {
+        this.categories = categories;
     }
 
     public void setCatalogs(Map<String, String> catalogs) {

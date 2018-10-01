@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.entities;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.pages;
 
 import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;

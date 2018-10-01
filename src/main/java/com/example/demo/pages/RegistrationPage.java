@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.pages;
 
+import com.example.demo.entities.Registration;
+import com.example.demo.repositories.RegistrationRepository;
 import org.springframework.data.domain.Example;
 
 import javax.faces.application.FacesMessage;
