@@ -5,6 +5,7 @@ import org.springframework.data.domain.Example;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.ArrayList;
@@ -22,7 +23,6 @@ public class LoginPage {
     @Inject
     private CatalogRepository catalogRepository;
 
-
     public CatalogRepository getCatalogRepository() {
         return catalogRepository;
     }
@@ -33,14 +33,64 @@ public class LoginPage {
 
     @PostConstruct
     public void init() {
-        List<Category> categories = new ArrayList<>();
-        Catalog catalog = new Catalog();
-        catalog.setCategories(categories);
-        catalog.setName("Catalog");
+        Catalog catalog0 = new Catalog();
+        catalog0.setCategories(new ArrayList<>());
+        catalog0.setName("Catalog");
 
         Category category = new Category();
         category.setCategoryName("Herbs");
         category.setDescription("After meal before 12pm");
+        catalog0.getCategories().add(category);
+
+
+
+        Catalog catalog1 = new Catalog();
+        catalog1.setCategories(new ArrayList<>());
+        catalog1.setName("Catalog1");
+
+        category = new Category();
+        category.setCategoryName("Herbs42423");
+        category.setDescription("After meal before 12pm");
+        catalog1.getCategories().add(category);
+
+        category = new Category();
+        category.setCategoryName("Herbs123123");
+        category.setDescription("After meal before 12pm");
+        catalog1.getCategories().add(category);
+
+
+
+        Catalog catalog2 = new Catalog();
+        catalog2.setCategories(new ArrayList<>());
+        catalog2.setName("Catalog2");
+
+        category = new Category();
+        category.setCategoryName("8984203948203948");
+        category.setDescription("After meal before 12pm");
+        catalog2.getCategories().add(category);
+
+        category = new Category();
+        category.setCategoryName("98237492847392384");
+        category.setDescription("After meal before 12pm");
+        catalog2.getCategories().add(category);
+
+
+
+        Catalog catalog3 = new Catalog();
+        catalog3.setCategories(new ArrayList<>());
+        catalog3.setName("Catalog3");
+
+        category = new Category();
+        category.setCategoryName("SDKFJLSDKFJSLDFKJ");
+        category.setDescription("After meal before 12pm");
+        catalog3.getCategories().add(category);
+
+        category = new Category();
+        category.setCategoryName("HFKLJSLDKFJSDF");
+        category.setDescription("After meal before 12pm");
+        catalog3.getCategories().add(category);
+
+
 
         List<Medicine> medicines = new ArrayList<>();
         Medicine medicine = new Medicine();
@@ -50,8 +100,11 @@ public class LoginPage {
         medicine.setDescription("With meal twice daily");
 
         medicines.add(medicine);
-        categories.add(category);
-        catalogRepository.save(catalog);
+
+        catalogRepository.save(catalog0);
+        catalogRepository.save(catalog1);
+        catalogRepository.save(catalog2);
+        catalogRepository.save(catalog3);
 
         System.out.println("saved");
 

@@ -3,6 +3,7 @@ package com.example.demo;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.Map;
 
 @SuppressWarnings("ALL")
 @Named
+@ViewScoped
 public class HomePage {
 
     @Inject
