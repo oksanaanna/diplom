@@ -3,11 +3,10 @@ package com.example.demo;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.faces.model.SelectItem;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @SuppressWarnings("ALL")
 @Named
@@ -21,9 +20,9 @@ public class HomePage {
 
     private String password;
 
-    private Catalog selectedCatalog;
+    private String selectedCatalogId;
 
-    private List<SelectItem> catalogs;
+    private Map<String, String> catalogs;
 
     private String login;
 
@@ -43,12 +42,11 @@ public class HomePage {
         }
     }
 
-    private List<SelectItem> readCatalogsFromDatabase() {
-        List<SelectItem> catalogItems = new ArrayList<>();
+    private Map<String, String> readCatalogsFromDatabase() {
+        Map<String, String> catalogItems = new HashMap<>();
 
         for (Catalog catalog : catalogRepository.findAll()) {
-            SelectItem catalogItem = new SelectItem(catalog, catalog.getName());
-            catalogItems.add(catalogItem);
+            catalogItems.put(catalog.getName(), String.valueOf(catalog.getId()));
         }
 
         return catalogItems;
@@ -69,11 +67,11 @@ public class HomePage {
                 message, null));
     }
 
-    public List<SelectItem> getCatalogs() {
+    public Map<String, String> getCatalogs() {
         return catalogs;
     }
 
-    public void setCatalogs(List<SelectItem> catalogs) {
+    public void setCatalogs(Map<String, String> catalogs) {
         this.catalogs = catalogs;
     }
 
@@ -85,12 +83,12 @@ public class HomePage {
         this.person = person;
     }
 
-    public Catalog getSelectedCatalog() {
-        return selectedCatalog;
+    public String getSelectedCatalogId() {
+        return selectedCatalogId;
     }
 
-    public void setSelectedCatalog(Catalog selectedCatalog) {
-        this.selectedCatalog = selectedCatalog;
+    public void setSelectedCatalogId(String selectedCatalogId) {
+        this.selectedCatalogId = selectedCatalogId;
     }
 
     public int getAge() {
