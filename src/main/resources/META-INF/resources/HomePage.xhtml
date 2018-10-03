@@ -50,10 +50,11 @@
 
                     <p:selectOneMenu value="#{homePage.selectedCatalogId}">
                         <f:selectItems value="#{homePage.catalogs}"/>
+                        <p:ajax update="categories" listener="#{homePage.updateCategoriesList}" />
                     </p:selectOneMenu>
 
                     <p:outputLabel value="Category" style="font-size: 15px;color: blue "/>
-                    <p:selectOneMenu value="#{homePage.selectedCategoryId}">
+                    <p:selectOneMenu id="categories" value="#{homePage.selectedCategoryId}">
                         <f:selectItems value="#{homePage.categories}"/>
                     </p:selectOneMenu>
                 </h:panelGrid>

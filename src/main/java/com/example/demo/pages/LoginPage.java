@@ -44,23 +44,30 @@ public class LoginPage {
 
         Category category = new Category();
         category.setCategoryName("Herbs");
-        category.setDescription("After meal before 12pm");
+        category.setDescription("After meal");
+        category.setCatalog(catalog0);
         catalog0.getCategories().add(category);
 
-
+        category = new Category();
+        category.setCategoryName("Herbs");
+        category.setDescription("After meal");
+        category.setCatalog(catalog0);
+        catalog0.getCategories().add(category);
 
         Catalog catalog1 = new Catalog();
         catalog1.setCategories(new ArrayList<>());
         catalog1.setName("Catalog1");
 
         category = new Category();
-        category.setCategoryName("Herbs42423");
-        category.setDescription("After meal before 12pm");
+        category.setCategoryName("Herbs & Tincture");
+        category.setDescription("15 minutes before meal");
+        category.setCatalog(catalog1);
         catalog1.getCategories().add(category);
 
         category = new Category();
-        category.setCategoryName("Herbs123123");
-        category.setDescription("After meal before 12pm");
+        category.setCategoryName("Herbs to relax");
+        category.setDescription("2 hours before sleep");
+        category.setCatalog(catalog1);
         catalog1.getCategories().add(category);
 
 
@@ -70,13 +77,15 @@ public class LoginPage {
         catalog2.setName("Catalog2");
 
         category = new Category();
-        category.setCategoryName("8984203948203948");
-        category.setDescription("After meal before 12pm");
+        category.setCategoryName("Cosmetics for skin & hair");
+        category.setDescription("Follow the instructions");
+        category.setCatalog(catalog2);
         catalog2.getCategories().add(category);
 
         category = new Category();
-        category.setCategoryName("98237492847392384");
+        category.setCategoryName("Spices");
         category.setDescription("After meal before 12pm");
+        category.setCatalog(catalog2);
         catalog2.getCategories().add(category);
 
 
@@ -86,32 +95,30 @@ public class LoginPage {
         catalog3.setName("Catalog3");
 
         category = new Category();
-        category.setCategoryName("SDKFJLSDKFJSLDFKJ");
-        category.setDescription("After meal before 12pm");
+        category.setCategoryName("Children & Infants");
+        category.setDescription("15 min after meal");
+        category.setCatalog(catalog3);
         catalog3.getCategories().add(category);
 
         category = new Category();
-        category.setCategoryName("HFKLJSLDKFJSDF");
-        category.setDescription("After meal before 12pm");
+        category.setCategoryName("Juniors");
+        category.setDescription("After breakfast");
+        category.setCatalog(catalog3);
         catalog3.getCategories().add(category);
-
-
-
-        List<Medicine> medicines = new ArrayList<>();
-        Medicine medicine = new Medicine();
-        medicine.setConsistency("Natural");
-        medicine.setName("Krimol");
-        medicine.setPrice(300);
-        medicine.setDescription("With meal twice daily");
-
-        medicines.add(medicine);
 
         catalogRepository.save(catalog0);
         catalogRepository.save(catalog1);
         catalogRepository.save(catalog2);
         catalogRepository.save(catalog3);
 
-        System.out.println("saved");
+
+
+        Medicine medicine = new Medicine();
+        medicine.setConsistency("Natural");
+        medicine.setName("Krimol");
+        medicine.setPrice(300);
+        medicine.setDescription("With meal twice daily");
+
 
     }
 

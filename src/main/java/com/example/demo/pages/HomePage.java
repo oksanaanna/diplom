@@ -11,8 +11,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @SuppressWarnings("ALL")
 @Named
@@ -45,7 +44,7 @@ public class HomePage {
     @PostConstruct
     public void init() {
         catalogs = readCatalogsFromDatabase();
-        categories = readCategoriesFromDatabase();
+        categories = new HashMap<>();
     }
 
     public String checkPassword() {
@@ -67,14 +66,24 @@ public class HomePage {
         return catalogItems;
     }
 
-    private Map<String, String> readCategoriesFromDatabase() {
+    private Map<String, String> convertToMap(List<Category> categories) {
         Map<String, String> catalogItems = new HashMap<>();
 
-        for (Category category : categoryRepository.findAll()) {
+        for (Category category : categories) {
             catalogItems.put(category.getCategoryName(), String.valueOf(category.getId()));
         }
 
         return catalogItems;
+    }
+
+    public void updateCategoriesList() {
+        System.out.println("Selected Catalog is " + selectedCatalogId);
+
+        Optional<Catalog> catalog = catalogRepository.findById(Long.parseLong(selectedCatalogId));
+        if (catalog.isPresent()) {
+            List<Category> categories = catalog.get().getCategories();
+            this.categories = convertToMap(categories);
+        }
     }
 
     public String age() {
