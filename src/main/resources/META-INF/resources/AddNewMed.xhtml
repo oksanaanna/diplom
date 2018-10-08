@@ -23,15 +23,29 @@
                 <f:selectItems value="#{homePage.catalogs}"/>
                 <p:ajax update="categories" listener="#{homePage.updateCategoriesList}"/>
             </p:selectOneMenu>
-            <br/>
 
             <p:outputLabel value="Category" style="font-size: 15px;color: blue "/>
             <p:selectOneMenu id="categories" value="#{homePage.selectedCategoryId}">
                 <f:selectItems value="#{homePage.categories}"/>
             </p:selectOneMenu>
-            <br/>
-
         </h:panelGrid>
+
+        <h:panelGrid columns="2">
+            <p:outputLabel value="Name" style="font-size: 16px; color: dodgerblue "/>
+            <p:inputText value="#{addNewMedicinePage.name}" style="background: aliceblue;font-size: 16px; color: darkblue"/>
+
+            <p:outputLabel value="Description" style="font-size: 16px; color: dodgerblue "/>
+            <p:inputText value="#{addNewMedicinePage.description}" style="background: aliceblue;font-size: 16px; color: darkblue"/>
+
+            <p:outputLabel value="Consistency" style="font-size: 16px; color: dodgerblue "/>
+            <p:inputText value="#{addNewMedicinePage.consistency}" style="background: aliceblue;font-size: 16px; color: darkblue"/>
+
+            <p:outputLabel value="Price" style="font-size: 16px; color: dodgerblue "/>
+            <p:inputText value="#{addNewMedicinePage.price}" style="background: aliceblue;font-size: 16px; color: darkblue"/>
+        </h:panelGrid>
+
+        <p:commandButton value="Save new medicine"
+                         action="#{addNewMedicinePage.saveNewMedicine()}" />
 
     </h:form>
 
