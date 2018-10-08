@@ -2,8 +2,10 @@ package com.example.demo.pages;
 
 import com.example.demo.entities.Catalog;
 import com.example.demo.entities.Category;
+import com.example.demo.entities.Medicine;
 import com.example.demo.repositories.CatalogRepository;
 import com.example.demo.repositories.CategoryRepository;
+import com.example.demo.repositories.MedicineRepository;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
@@ -27,6 +29,9 @@ public class HomePage {
     @Inject
     private CategoryRepository categoryRepository;
 
+    @Inject
+    private MedicineRepository medicineRepository;
+
     private String password;
 
     private String selectedCatalogId;
@@ -41,10 +46,13 @@ public class HomePage {
 
     private int age;
 
+    private List<Medicine> allMedicine;
+
     @PostConstruct
     public void init() {
         catalogs = readCatalogsFromDatabase();
         categories = new HashMap<>();
+        allMedicine = medicineRepository.findAll();
     }
 
     public String checkPassword() {
@@ -99,6 +107,14 @@ public class HomePage {
         FacesContext context = FacesContext.getCurrentInstance();
         context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN,
                 message, null));
+    }
+
+    public List<Medicine> getAllMedicine() {
+        return allMedicine;
+    }
+
+    public void setAllMedicine(List<Medicine> allMedicine) {
+        this.allMedicine = allMedicine;
     }
 
     public Map<String, String> getCatalogs() {
