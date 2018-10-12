@@ -1,9 +1,6 @@
 package com.example.demo.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -13,8 +10,11 @@ public class Medicine {
     private Long id;
     private String name;
     private String description;
-    private String consistency;
+    private String composition;
     private int price;
+
+    @ManyToOne
+    private Category category;
 
     public Long getId() {
         return id;
@@ -22,6 +22,14 @@ public class Medicine {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public String getName() {
@@ -40,12 +48,12 @@ public class Medicine {
         this.description = description;
     }
 
-    public String getConsistency() {
-        return consistency;
+    public String getComposition() {
+        return composition;
     }
 
-    public void setConsistency(String consistency) {
-        this.consistency = consistency;
+    public void setComposition(String composition) {
+        this.composition = composition;
     }
 
     public int getPrice() {

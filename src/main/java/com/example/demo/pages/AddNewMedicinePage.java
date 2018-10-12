@@ -21,13 +21,13 @@ public class AddNewMedicinePage {
 
     private String name;
     private String description;
-    private String consistency;
+    private String composition;
     private String price;
 
     public void saveNewMedicine() {
         Medicine medicine = new Medicine();
         medicine.setName(name);
-        medicine.setConsistency(consistency);
+        medicine.setComposition(composition);
         medicine.setDescription(description);
         medicine.setPrice(Integer.parseInt(price));
 
@@ -74,12 +74,12 @@ public class AddNewMedicinePage {
         this.description = description;
     }
 
-    public String getConsistency() {
-        return consistency;
+    public String getComposition() {
+        return composition;
     }
 
-    public void setConsistency(String consistency) {
-        this.consistency = consistency;
+    public void setComposition(String composition) {
+        this.composition = composition;
     }
 
     public String getPrice() {

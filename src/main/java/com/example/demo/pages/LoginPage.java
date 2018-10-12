@@ -117,45 +117,45 @@ public class LoginPage {
 
 
         Medicine medicine = new Medicine();
-        medicine.setConsistency("Natural");
+        medicine.setComposition("Natural");
         medicine.setName("Liv 52");
         medicine.setPrice(153);
         medicine.setDescription("Before meal 2 tablets twice daily");
         medicineRepository.save(medicine);
 
         medicine = new Medicine();
-        medicine.setConsistency("Natural");
+        medicine.setComposition("Natural");
         medicine.setName("Liv 52 DS");
-        medicine.setPrice(300);
+        medicine.setPrice(170);
         medicine.setDescription("Before meal 1 tablets twice daily");
         medicineRepository.save(medicine);
 
         medicine = new Medicine();
-        medicine.setConsistency("Natural");
+        medicine.setComposition("Natural");
         medicine.setName("Krimol");
-        medicine.setPrice(300);
+        medicine.setPrice(90);
         medicine.setDescription("5-10ml three times daily");
         medicineRepository.save(medicine);
 
         medicine = new Medicine();
-        medicine.setConsistency("y8768768976987698769876");
-        medicine.setName("K34543545345rimol");
-        medicine.setPrice(300);
-        medicine.setDescription("With21312312 meal twice daily");
+        medicine.setComposition("Antiseptic");
+        medicine.setName("Nifruksazid");
+        medicine.setPrice(60);
+        medicine.setDescription("With meal twice daily");
         medicineRepository.save(medicine);
 
         medicine = new Medicine();
-        medicine.setConsistency("Nat23423423423423ural");
-        medicine.setName("Krimo234324234l");
-        medicine.setPrice(300);
-        medicine.setDescription("With m234234234eal twice daily");
+        medicine.setComposition("");
+        medicine.setName("Kreon");
+        medicine.setPrice(150);
+        medicine.setDescription("15 min before meal");
         medicineRepository.save(medicine);
 
         medicine = new Medicine();
-        medicine.setConsistency("Nat23423432ural");
-        medicine.setName("Kri2343242mol");
-        medicine.setPrice(300);
-        medicine.setDescription("With meal 23423423234twice daily");
+        medicine.setComposition("Cofein and Aspirin");
+        medicine.setName("Citramon");
+        medicine.setPrice(30);
+        medicine.setDescription("After meal");
         medicineRepository.save(medicine);
 
     }

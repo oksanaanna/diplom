@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Category {
@@ -13,6 +14,17 @@ public class Category {
 
     @ManyToOne
     private Catalog catalog;
+
+    @OneToMany(mappedBy = "category")
+    List<Medicine> medicines;
+
+    public List<Medicine> getMedicines() {
+        return medicines;
+    }
+
+    public void setMedicines(List<Medicine> medicines) {
+        this.medicines = medicines;
+    }
 
     public Catalog getCatalog() {
         return catalog;
